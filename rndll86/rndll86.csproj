@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{4140D12E-20F1-4AC5-ABC1-6A8D9CB89F31}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>rndll86</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.VisualBasic\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rndll86.My.Resources\Resources.cs" />
+    <Compile Include="rndll86.My\InternalXmlHelper.cs" />
+    <Compile Include="rndll86.My\MyApplication.cs" />
+    <Compile Include="rndll86.My\MyComputer.cs" />
+    <Compile Include="rndll86.My\MyProject.cs" />
+    <Compile Include="rndll86.My\MySettings.cs" />
+    <Compile Include="rndll86.My\MySettingsProperty.cs" />
+    <Compile Include="rndll86\Form1.cs" />
+    <Compile Include="rndll86\fullscreen.cs" />
+    <Compile Include="rndll86\lataj_kurde.cs" />
+    <Compile Include="rndll86\rek1.cs" />
+    <Compile Include="rndll86\rek2.cs" />
+    <Compile Include="rndll86\rek3.cs" />
+    <Compile Include="rndll86\rek4.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rndll86\Form1.resx" />
+    <EmbeddedResource Include="rndll86\fullscreen.resx" />
+    <EmbeddedResource Include="rndll86\lataj_kurde.resx" />
+    <EmbeddedResource Include="rndll86\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
